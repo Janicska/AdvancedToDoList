@@ -6,11 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.content.SharedPreferences;
 
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 editor.putString("name", input.getText().toString());
                 editor.commit();
-                startActivity(new Intent(MainActivity.this, today.class));
+                startActivity(new Intent(MainActivity.this, Today.class));
             }
         });
     }

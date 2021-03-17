@@ -35,6 +35,7 @@ public class Settings extends AppCompatActivity {
                     editor.putString("name", newname);
                     editor.commit();
                 }
+                startActivity(new Intent(Settings.this, Today.class));
 
             }
         });
