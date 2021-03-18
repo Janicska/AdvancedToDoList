@@ -19,7 +19,7 @@ public class Settings extends AppCompatActivity {
 
         TextInputEditText nameInput = (TextInputEditText) findViewById(R.id.nameInput);
         SharedPreferences sharedPreferences = this.getSharedPreferences("MyPref", MODE_PRIVATE);
-        String yourname=sharedPreferences.getString("name", "Your name");
+        String yourname=sharedPreferences.getString("name", "");
 
         nameInput.setText(yourname);
         Button saveBtn = (Button) findViewById(R.id.saveBtn);
@@ -29,13 +29,17 @@ public class Settings extends AppCompatActivity {
             public void onClick(View view) {
 
                 String newname=nameInput.getText().toString();
-                if(newname.length()!=0)
+                if(newname.trim().length()!=0)
                 {
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("name", newname);
                     editor.commit();
+                    startActivity(new Intent(Settings.this, Today.class));
                 }
-                startActivity(new Intent(Settings.this, Today.class));
+                else
+                {
+                    nameInput.setError("You need to enter a name");
+                }
 
             }
         });

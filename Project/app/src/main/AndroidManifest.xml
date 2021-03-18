@@ -9,13 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AdvancedToDoList">
-        <activity android:name=".AddPopUp"></activity>
+        <activity android:name=".Calendar"
+                android:exported="true"></activity>
+        <activity android:name=".AddPopUp" />
         <activity
             android:name=".Settings"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Today"
             android:configChanges="orientation"
+            android:exported="true"
             android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
