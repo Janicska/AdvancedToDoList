@@ -1,15 +1,20 @@
 package com.app.advancedtodolist;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.view.View.OnClickListener;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -26,22 +31,28 @@ public class Today extends AppCompatActivity {
 
         ListView lv = (ListView) findViewById(R.id.listview);
         TextView date = (TextView) findViewById(R.id.date);
-        Button add = (Button) findViewById(R.id.add);
-        Button settings = (Button) findViewById(R.id.settings);
+        ImageView settingsImage = (ImageView) findViewById(R.id.settingsImg);
+        ImageView addImage = (ImageView) findViewById(R.id.addImg);
+        ImageView calendarImage = (ImageView) findViewById(R.id.calendarImg);
 
+        settingsImage.setOnClickListener(new OnClickListener() {
 
-        settings.setOnClickListener(new View.OnClickListener() {
-
-            @Override
             public void onClick(View view) {
                 startActivity(new Intent(Today.this, Settings.class));
             }
         });
-        add.setOnClickListener(new View.OnClickListener() {
 
-            @Override
+        addImage.setOnClickListener(new OnClickListener() {
+
             public void onClick(View view) {
                 startActivity(new Intent(Today.this, AddPopUp.class));
+            }
+        });
+
+        calendarImage.setOnClickListener(new OnClickListener() {
+
+            public void onClick(View view) {
+                startActivity(new Intent(Today.this, Calendar.class));
             }
         });
 
