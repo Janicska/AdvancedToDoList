@@ -16,7 +16,7 @@ jobs:
           java-version: 1.8
 
       - name: Run Tests
-        run: ./Project/gradlew.bat test
+        run: ./Project/gradlew :subProject:test
 
       - name: Build Project
-        run: ./Project/gradlew.bat assemble
+        run: ./Project/gradlew :subProject:test assemble
