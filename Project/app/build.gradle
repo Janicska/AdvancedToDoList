@@ -38,6 +38,12 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
 
+test {
+    useJUnit()
+
+    maxHeapSize = '1G'
+}
+
 task.register("test") {
     useJUnit()
 
