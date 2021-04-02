@@ -30,6 +30,7 @@ public class Today extends AppCompatActivity {
         setContentView(R.layout.activity_today);
 
 
+
         ListView lv = (ListView) findViewById(R.id.listview);
         TextView date = (TextView) findViewById(R.id.date);
         ImageView settingsImage = (ImageView) findViewById(R.id.settingsImg);
