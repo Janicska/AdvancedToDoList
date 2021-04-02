@@ -35,6 +35,7 @@ public class Today extends AppCompatActivity {
         ImageView addImage = (ImageView) findViewById(R.id.addImg);
         ImageView calendarImage = (ImageView) findViewById(R.id.calendarImg);
 
+
         settingsImage.setOnClickListener(new OnClickListener() {
 
             public void onClick(View view) {
