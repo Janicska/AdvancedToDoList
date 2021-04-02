@@ -16,7 +16,7 @@ jobs:
           java-version: 1.8
 
       - name: Run Tests
-        run: ./Project/gradlew test --scan
+        run: ./Project/gradlew test --stacktrace
 
       - name: Build Project
         run: ./Project/gradlew :Project:assemble
