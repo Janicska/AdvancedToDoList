@@ -17,4 +17,4 @@ jobs:
 
 
       - name: Build Project
-        run: ./Project/gradlew.bin assemble
+        run: ./Project/gradlew.bat assemble
