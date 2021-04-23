@@ -1,4 +1,9 @@
-generate-doc:
-  image: openjdk
-  script:
-    - javadoc app/src/main/java/com/app/advancedtodolist/*
+name: Generate Javadoc
+
+on: push
+
+jobs:
+  generate-doc:
+    runs-on: ubuntu-latest
+    image: openjdk
+    command: "javadoc app/src/main/java/com/app/advancedtodolist/*
