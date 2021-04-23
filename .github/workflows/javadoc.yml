@@ -1,0 +1,4 @@
+generate-doc:
+  image: openjdk
+  script:
+    - javadoc app/src/main/java/com/app/advancedtodolist/*
