@@ -11,6 +11,11 @@ import android.content.SharedPreferences;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class MainActivity extends AppCompatActivity {
+    /**
+        * This is the main method
+        * which is very important for
+        * execution for a java program.
+        */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
