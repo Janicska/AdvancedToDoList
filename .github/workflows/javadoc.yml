@@ -13,4 +13,4 @@ jobs:
         with:
           java-version: 1.8
       - name: Generate Javadoc
-        run: javadoc app/src/main/java/com/app/advancedtodolist
+        run: javadoc -sourcepath app/src/main/java com.app.advancedtodolist
