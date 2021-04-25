@@ -28,7 +28,8 @@ allprojects {
 }
 sourceSets {
     build {
-          java.srcDirs file('app/src/main/java/com/app/advancedtodolist')
+          srcDirs = ["app/src/main/java/com/app/advancedtodolist"]
+          java.srcDirs file("app/src/main/java/com/app/advancedtodolist")
     }
 }
 
