@@ -15,9 +15,7 @@ jobs:
         with:
           java-version: 1.8
       - name: Before
-        run: chmod +x gradlew
-             chmod +x javadoc.exe
-             chmod +x android.jar
+        run: chmod +x gradlew javadoc.exe android.jar
       - name: Run Test
         run: ./gradlew test
         
