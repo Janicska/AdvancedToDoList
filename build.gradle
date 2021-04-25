@@ -30,7 +30,7 @@ allprojects {
 sourceSets {
     main {
         java {
-            srcDirs = [""app/src/main/java/com/app/advancedtodolist"]
+            srcDirs = ["app/src/main/java/com/app/advancedtodolist"]
         }
     }
 }
