@@ -12,7 +12,7 @@ buildscript {
     }
 }
 
-apply plugin: 'java'
+
 
 allprojects {
     repositories {
@@ -24,3 +24,4 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+apply plugin: 'java'
