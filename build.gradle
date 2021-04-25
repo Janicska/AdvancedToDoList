@@ -28,7 +28,7 @@ allprojects {
 }
 sourceSets {
     build {
-        java.com.app.advancedtodolist file('app/src/main/java/com/app/advancedtodolist')
+        java.com/app/advancedtodolist file('app/src/main/java/com/app/advancedtodolist')
     }
 }
 
