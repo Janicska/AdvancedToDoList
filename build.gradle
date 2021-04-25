@@ -26,9 +26,17 @@ allprojects {
         jcenter()
     }
 }
+
+sourceSets {
+    main {
+        java {
+            srcDirs = [""app/src/main/java/com/app/advancedtodolist"]
+        }
+    }
+}
+
 sourceSets {
     build {
-          srcDirs = ["app/src/main/java/com/app/advancedtodolist"]
           java.srcDirs file("app/src/main/java/com/app/advancedtodolist")
     }
 }
