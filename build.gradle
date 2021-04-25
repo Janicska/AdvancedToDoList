@@ -28,8 +28,14 @@ allprojects {
 }
 
 sourceSets {
+ main {
+    java { asd = ["app/src/main/java/com/app/advancedtodolist"] }
+    }
+} 
+
+sourceSets {
     build {
-          java.["app/src/main/java/com/app/advancedtodolist"] file("app/src/main/java/com/app/advancedtodolist")
+          java.asd file("app/src/main/java/com/app/advancedtodolist")
     }
 }
 
