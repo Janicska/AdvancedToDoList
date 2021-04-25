@@ -12,6 +12,8 @@ buildscript {
     }
 }
 
+apply plugin: 'java'
+
 allprojects {
     repositories {
         google()
