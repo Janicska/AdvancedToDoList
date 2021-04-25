@@ -12,14 +12,6 @@ buildscript {
     }
 }
 
-apply plugin: 'java'
-
-javadoc {
-    source = sourceSets.main.allJava
-
-    classpath = configurations.compile
-}
-
 allprojects {
     repositories {
         google()
@@ -27,10 +19,6 @@ allprojects {
     }
 }
 
-
-sourceSets {
-    build {
-          java.srcDir file("app/src/main/java/com/app/advancedtodolist")
-    }
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }
-
