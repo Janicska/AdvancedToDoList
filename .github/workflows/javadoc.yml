@@ -13,4 +13,4 @@ jobs:
         with:
           java-version: 1.8
       - name: Generate Javadoc
-        run: javadoc -sourcepath app/src/main/java -subpackages .
+        run: javadoc -sourcepath /app/src/main/java/com/app/advancedtodolist -subpackages *.java -exclude java.net:java.lang -package
