@@ -19,7 +19,6 @@ javadoc {
 
     classpath = configurations.compile
 }
-include 'app/src/main/java/com/app/advancedtodolist/*'
 
 allprojects {
     repositories {
@@ -27,5 +26,10 @@ allprojects {
         jcenter()
     }
 }
+sourceSets {
+    build {
+        java.srcDir file('app/src/main/java/com/app/advancedtodolist')
 
+    }
+}
 
