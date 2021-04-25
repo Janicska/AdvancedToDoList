@@ -15,11 +15,9 @@ jobs:
         with:
           java-version: 1.8
       - name: Before
-        run: chmod +x gradlew javadoc.exe android.jar
+        run: chmod +x gradlew
       - name: Run Test
         run: ./gradlew test
         
       - name: Build Project
         run: ./gradlew assemble
-      - name: Javadoc
-        run: ./javadoc.exe -protected -splitindex -d ./doc @javadoc_args -bootclasspath android.jar -Xdoclint:none
