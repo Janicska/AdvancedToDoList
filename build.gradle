@@ -19,6 +19,7 @@ javadoc {
 
     classpath = configurations.compile
 }
+include 'app/src/main/java/com/app/advancedtodolist/*'
 
 allprojects {
     repositories {
