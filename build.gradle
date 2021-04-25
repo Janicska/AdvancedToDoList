@@ -28,7 +28,7 @@ allprojects {
 }
 sourceSets {
     build {
-        java.srcDir file('app/src/main/java/com/app/advancedtodolist')
+        java. file('app/src/main/java/com/app/advancedtodolist')
     }
 }
 
