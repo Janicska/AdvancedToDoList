@@ -21,4 +21,7 @@ jobs:
         
       - name: Build Project
         run: ./gradlew assemble
+        
+      - name: Generate Javadoc
+        run: ./gradlew javadoc
 
