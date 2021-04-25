@@ -29,13 +29,13 @@ allprojects {
 
 sourceSets {
  main {
-    java { asd = ["app/src/main/java/com/app/advancedtodolist"] }
+    java { srcDirs ["app/src/main/java/com/app/advancedtodolist"] }
     }
 } 
 
 sourceSets {
     build {
-          java.asd file("app/src/main/java/com/app/advancedtodolist")
+          java.srcDirs file("app/src/main/java/com/app/advancedtodolist")
     }
 }
 
