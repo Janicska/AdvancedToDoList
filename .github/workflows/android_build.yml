@@ -24,4 +24,7 @@ jobs:
         
       - name: Generate Javadoc
         run: ./gradlew javadoc
-
+          :compileJava
+          :processResources
+          :classes
+          :javadoc
