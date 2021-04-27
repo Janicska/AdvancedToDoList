@@ -26,7 +26,8 @@ jobs:
         run: ./gradlew spotbugsDebug
       
       - name: ClangFormat
-      - uses: actions/checkout@v2
-      - uses: RafikFarhad/clang-format-github-action@v1
-        with:
-          sources: "app/**/*.java
+      - steps:
+        - uses: actions/checkout@v2
+        - uses: RafikFarhad/clang-format-github-action@v1
+          with:
+            sources: "app/**/*.java
