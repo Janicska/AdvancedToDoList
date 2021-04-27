@@ -37,7 +37,7 @@ public class AddPopUp extends Activity{
         EditText from = new EditText(this);
         EditText to = new EditText(this);
 
-        Button but = new Button(this); 
+        Button but = new Button(this);
 
         ImageView priorityImg = new ImageView(this);
         priorityImg.setImageResource(R.drawable.ic_action_prio);
