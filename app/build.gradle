@@ -48,7 +48,7 @@ sourceSets {
 }
     
 spotbugs {
-    ignoreFailures = true
+    ignoreFailures = false
     reportsDir = file("$project.buildDir/SpotBugsReports")
     effort = "max"
     reportLevel = "high"
