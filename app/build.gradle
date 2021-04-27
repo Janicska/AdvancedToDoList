@@ -61,6 +61,9 @@ tasks.withType(com.github.spotbugs.snom.SpotBugsTask) {
     reports {
         // Enable HTML report only
         html.enabled = true
+        html {
+            destination file("$reportsDir/spotbugs/spotbugs.html")
+        }
         xml.enabled = false
     }
 }
