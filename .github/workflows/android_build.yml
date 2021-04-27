@@ -21,3 +21,6 @@ jobs:
         
       - name: Build Project
         run: ./gradlew assemble
+      
+      - name: SpotBugs
+        run: ./gradlew spotbugsMain
