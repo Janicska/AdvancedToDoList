@@ -40,3 +40,29 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     spotbugsPlugins 'com.h3xstream.findsecbugs:findsecbugs-plugin:1.10.1'
 }
+
+sourceSets {
+    main {
+        java.srcDirs = []
+    }
+}
+    
+spotbugs {
+    ignoreFailures = true
+    reportsDir = file("$project.buildDir/SpotBugsReports")
+    effort = "max"
+    reportLevel = "high"
+}
+
+// Note: gradle 4/5 should use "com.github.spotbugs.SpotBugsTask"
+tasks.withType(com.github.spotbugs.snom.SpotBugsTask) {
+    dependsOn 'assembleDebug'
+    classes = files("$project.buildDir/intermediates/javac") // Important to use this path
+    excludeFilter = file("$project/spot-bugs-exclude.xml") // Optional - Explained below
+    source = fileTree('src/main/java') // Only needed on gradle 4/5
+    reports {
+        // Enable HTML report only
+        html.enabled = true
+        xml.enabled = false
+    }
+}
