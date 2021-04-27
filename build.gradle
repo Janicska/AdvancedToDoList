@@ -10,7 +10,6 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'app.src.main.java.com.app.advancedtodolist'
 
         // If you're using gradle 6.x, add this to use SpotBugs app version 4.0.2
         classpath "gradle.plugin.com.github.spotbugs.snom:spotbugs-gradle-plugin:4.3.0"
