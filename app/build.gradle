@@ -58,7 +58,6 @@ spotbugs {
 tasks.withType(com.github.spotbugs.snom.SpotBugsTask) {
     dependsOn 'assembleDebug'
     classes = files("$project.buildDir/intermediates/javac") // Important to use this path
-    excludeFilter = file("$project/spot-bugs-exclude.xml") // Optional - Explained below
     reports {
         // Enable HTML report only
         html.enabled = true
