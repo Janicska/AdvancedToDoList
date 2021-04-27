@@ -26,3 +26,10 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+tasks.withType(SpotBugsTask).configureEach {
+  reports {
+    xml.enabled false
+    html.enabled project.hasProperty('createReports')
+  }
+}
