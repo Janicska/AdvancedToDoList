@@ -25,7 +25,7 @@ jobs:
       - name: SpotBugs
         run: ./gradlew spotbugsDebug
         
-      - name: SpotBugs
+      - name: Generate APK
         run: ./gradlew assembleRelease
         
       - uses: actions/upload-artifact@v2
