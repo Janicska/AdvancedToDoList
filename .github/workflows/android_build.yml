@@ -25,5 +25,6 @@ jobs:
       - name: SpotBugs
         run: ./gradlew spotbugsDebug
         
-      - name: Generate APK
-        run: ./gradlew assembleRelease
+      - name: Sign Android release
+        uses: r0adkll/sign-android-release@v1
+
