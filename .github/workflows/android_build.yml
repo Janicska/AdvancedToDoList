@@ -25,7 +25,6 @@ jobs:
       - name: SpotBugs
         run: ./gradlew spotbugsDebug
         
-      - name: Sign Android release
       - uses: r0adkll/sign-android-release@v1
         name: Sign app APK
         # ID used to access action output
