@@ -1,42 +1,42 @@
-name: Generate APK
+#name: Generate APK
 
-on: push
+#on: push
 
-jobs:
-  release:
+#jobs:
+  #release:
 
-    runs-on: ubuntu-latest
+    #runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v1
+    #steps:
+      #- uses: actions/checkout@v1
 
-      - name: Set Up JDK
-        uses: actions/setup-java@v1
-        with:
-          java-version: 1.8
-      - name: Before
-        run: chmod +x gradlew
-      - name: Generate APK
-        run: ./gradlew assembleRelease
-      - name: Name APK
-        run: mv app/build/outputs/apk/release/app-release-unsigned.apk app/build/outputs/apk/release/AdvancedToDoList.apk
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
-      - name: Upload Release Asset
-        id: upload-release-asset 
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./app/build/outputs/apk/release/AdvancedToDoList.apk
-          asset_name: AdvancedToDoList.apk
-          asset_content_type: AdvancedToDoList/apk
+      #- name: Set Up JDK
+        #uses: actions/setup-java@v1
+        #with:
+          #java-version: 1.8
+      #- name: Before
+        #run: chmod +x gradlew
+      #- name: Generate APK
+        #run: ./gradlew assembleRelease
+      #- name: Name APK
+        #run: mv app/build/outputs/apk/release/app-release-unsigned.apk app/build/outputs/apk/release/AdvancedToDoList.apk
+      #- name: Create Release
+        #id: create_release
+        #uses: actions/create-release@v1
+        #env:
+          #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        #with:
+          #tag_name: ${{ github.ref }}
+          #release_name: Release ${{ github.ref }}
+          #draft: false
+          #prerelease: false
+      #- name: Upload Release Asset
+        #id: upload-release-asset 
+        #uses: actions/upload-release-asset@v1
+        #env:
+          #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        #with:
+          #upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+          #asset_path: ./app/build/outputs/apk/release/AdvancedToDoList.apk
+          #asset_name: AdvancedToDoList.apk
+          #asset_content_type: AdvancedToDoList/apk
