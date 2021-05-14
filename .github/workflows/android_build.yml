@@ -25,19 +25,13 @@ jobs:
       - name: SpotBugs
         run: ./gradlew spotbugsDebug
         
-      - uses: r0adkll/sign-android-release@v1
-        name: Sign app APK
-        # ID used to access action output
-        id: sign_app
-        with:
-          releaseDirectory: app/build/outputs/apk/release
-          signingKeyBase64: asdasd
-          alias: asdasd
-          keyStorePassword: asdasd
-          keyPassword: asdasd
-          
+      - name: SpotBugs
+        run: ./gradlew assembleRelease
+        
       - uses: actions/upload-artifact@v2
         with:
           name: Signed app bundle
-          path: app/build/outputs/apk/release/*
+          path: app/build/outputs/apk/release
+        
+
 
