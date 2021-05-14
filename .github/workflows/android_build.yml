@@ -24,3 +24,6 @@ jobs:
       
       - name: SpotBugs
         run: ./gradlew spotbugsDebug
+        
+      - name: Generate APK
+        run: ./gradlew assembleRelease
