@@ -18,6 +18,8 @@ jobs:
         run: chmod +x gradlew
       - name: Generate APK
         run: ./gradlew assembleRelease
+      - name: Name APK
+        run: mv app/build/outputs/apk/release/app-release-unsigned.apk app/build/outputs/apk/release/AdvancedToDoList.apk
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -35,6 +37,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./app/build/outputs/apk/release/app-release-unsigned.apk
-          asset_name: app-release-unsigned.apk
-          asset_content_type: app-release-unsigned/apk
+          asset_path: ./app/build/outputs/apk/release/AdvancedToDoList.apk
+          asset_name: AdvancedToDoList.apk
+          asset_content_type: AdvancedToDoList/apk
